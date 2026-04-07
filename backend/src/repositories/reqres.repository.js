@@ -13,7 +13,7 @@ class ReqresRepository {
   async getUserById(id) {
     try {
       const response = await reqresClient.get(`/users/${id}`);
-      return response.data.data; // ReqRes devuelve { data: { id, email, ... } }
+      return response.data;
     } catch (error) {
       throw new Error(`Failed to fetch user ${id} from ReqRes: ${error.message}`);
     }

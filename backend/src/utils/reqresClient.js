@@ -1,22 +1,19 @@
 const axios = require('axios');
 
-const headers = {
-  'Content-Type': 'application/json'
-};
-
-// Agregar API key si está disponible
-if (process.env.REQRES_API_KEY) {
-  headers['x-api-key'] = process.env.REQRES_API_KEY;
-}
-
 const reqresClient = axios.create({
   baseURL: process.env.REQRES_API_URL || 'https://reqres.in/api',
   timeout: 10000,
-  headers
+  headers: {
+    'Content-Type': 'application/json'
+  }
 });
 
+// Interceptor para agregar API key dinámicamente para endpoints de magic code
 reqresClient.interceptors.request.use(
   (config) => {
+    if (process.env.REQRES_API_KEY) {
+      config.headers['x-api-key'] = process.env.REQRES_API_KEY;
+    }
     return config;
   },
   (error) => {
