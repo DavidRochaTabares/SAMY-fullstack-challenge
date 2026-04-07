@@ -64,9 +64,9 @@ class PostService {
           // Si author.id es null, el usuario no está en DB local
           if (postCopy.author && !postCopy.author.id && postCopy.authorUserId) {
             try {
-              const reqresUser = await reqresRepository.getUserById(postCopy.authorUserId);
-              console.log('ReqRes User:', reqresUser); // DEBUG
-              if (reqresUser) {
+              const reqresResponse = await reqresRepository.getUserById(postCopy.authorUserId);
+              if (reqresResponse && reqresResponse.data) {
+                const reqresUser = reqresResponse.data;
                 postCopy.author = {
                   id: reqresUser.id,
                   firstName: reqresUser.first_name,
@@ -74,10 +74,9 @@ class PostService {
                   email: reqresUser.email,
                   avatar: reqresUser.avatar
                 };
-                console.log('Post author set:', postCopy.author); // DEBUG
               }
             } catch (error) {
-              console.log('Error fetching user from ReqRes:', error.message); // DEBUG
+              console.log('Error fetching user from ReqRes:', error.message);
             }
           }
           return postCopy;
@@ -125,8 +124,9 @@ class PostService {
       
       if (postCopy.author && !postCopy.author.id && postCopy.authorUserId) {
         try {
-          const reqresUser = await reqresRepository.getUserById(postCopy.authorUserId);
-          if (reqresUser) {
+          const reqresResponse = await reqresRepository.getUserById(postCopy.authorUserId);
+          if (reqresResponse && reqresResponse.data) {
+            const reqresUser = reqresResponse.data;
             postCopy.author = {
               id: reqresUser.id,
               firstName: reqresUser.first_name,

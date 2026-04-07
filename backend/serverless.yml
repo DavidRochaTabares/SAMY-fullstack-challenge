@@ -1,0 +1,44 @@
+service: samy-backend
+
+params:
+  default:
+    DATABASE_URL_PRODUCTION: ${env:DATABASE_URL_PRODUCTION, ''}
+    REQRES_API_URL: ${env:REQRES_API_URL, 'https://reqres.in/api'}
+    REQRES_API_KEY: 'pub_6b4f29d17e8c76826f0b866585d8bee8a2b5e8dc8a7fdd43c8bd26e66bf7f56e'
+    CORS_ORIGIN: ${env:CORS_ORIGIN, '*'}
+    JWT_SECRET: ${env:JWT_SECRET, 'your-super-secret-jwt-key-change-this-in-production-12345'}
+    JWT_EXPIRES_IN: ${env:JWT_EXPIRES_IN, '24h'}
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+  memorySize: 512
+  timeout: 30
+  environment:
+    NODE_ENV: production
+    DATABASE_URL: ${param:DATABASE_URL_PRODUCTION}
+    REQRES_API_URL: ${param:REQRES_API_URL}
+    REQRES_API_KEY: ${param:REQRES_API_KEY}
+    CORS_ORIGIN: ${param:CORS_ORIGIN}
+    JWT_SECRET: ${param:JWT_SECRET}
+    JWT_EXPIRES_IN: ${param:JWT_EXPIRES_IN}
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
+
+plugins:
+  - serverless-offline
+
+useDotenv: true
