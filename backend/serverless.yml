@@ -5,7 +5,7 @@ params:
     DATABASE_URL_PRODUCTION: ${env:DATABASE_URL_PRODUCTION, ''}
     REQRES_API_URL: ${env:REQRES_API_URL, 'https://reqres.in/api'}
     REQRES_API_KEY: 'pub_6b4f29d17e8c76826f0b866585d8bee8a2b5e8dc8a7fdd43c8bd26e66bf7f56e'
-    CORS_ORIGIN: ${env:CORS_ORIGIN, '*'}
+    CORS_ORIGIN: '*'
     JWT_SECRET: ${env:JWT_SECRET, 'your-super-secret-jwt-key-change-this-in-production-12345'}
     JWT_EXPIRES_IN: ${env:JWT_EXPIRES_IN, '24h'}
 

@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import { createPost } from '@/store/slices/postsSlice';
-import { fetchAllReqresUsers } from '@/store/slices/usersSlice';
+import { fetchSavedUsers } from '@/store/slices/usersSlice';
 import ProtectedRoute from '@/components/auth/ProtectedRoute.jsx';
 import Navbar from '@/components/common/Navbar.jsx';
 import PostForm from '@/components/posts/PostForm.jsx';
@@ -15,7 +15,7 @@ export default function NewPostPage() {
   const { loading } = useSelector((state) => state.posts);
 
   useEffect(() => {
-    dispatch(fetchAllReqresUsers());
+    dispatch(fetchSavedUsers());
   }, [dispatch]);
 
   const handleSubmit = async (postData) => {
