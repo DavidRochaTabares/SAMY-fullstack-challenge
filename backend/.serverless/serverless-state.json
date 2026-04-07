@@ -16,7 +16,7 @@
         "DATABASE_URL": "postgresql://postgres.rtbqwfygfwjdsrlhluey:David.rocha12@aws-1-us-west-2.pooler.supabase.com:6543/postgres",
         "REQRES_API_URL": "https://reqres.in/api",
         "REQRES_API_KEY": "pub_6b4f29d17e8c76826f0b866585d8bee8a2b5e8dc8a7fdd43c8bd26e66bf7f56e",
-        "CORS_ORIGIN": "http://localhost:3000",
+        "CORS_ORIGIN": "*",
         "JWT_SECRET": "your-super-secret-jwt-key-change-this-in-production-12345",
         "JWT_EXPIRES_IN": "24h"
       },
@@ -114,7 +114,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-23c30712-c64b",
-                "S3Key": "serverless/samy-backend/dev/1775584325109-2026-04-07T17:52:05.109Z/samy-backend.zip"
+                "S3Key": "serverless/samy-backend/dev/1775584919846-2026-04-07T18:01:59.846Z/samy-backend.zip"
               },
               "Handler": "handler.handler",
               "Runtime": "nodejs18.x",
@@ -127,7 +127,7 @@
                   "DATABASE_URL": "postgresql://postgres.rtbqwfygfwjdsrlhluey:David.rocha12@aws-1-us-west-2.pooler.supabase.com:6543/postgres",
                   "REQRES_API_URL": "https://reqres.in/api",
                   "REQRES_API_KEY": "pub_6b4f29d17e8c76826f0b866585d8bee8a2b5e8dc8a7fdd43c8bd26e66bf7f56e",
-                  "CORS_ORIGIN": "http://localhost:3000",
+                  "CORS_ORIGIN": "*",
                   "JWT_SECRET": "your-super-secret-jwt-key-change-this-in-production-12345",
                   "JWT_EXPIRES_IN": "24h"
                 }
@@ -143,14 +143,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionR6apSnfSXAAGZt3tWKqW1Ht965sJ9Xtr6o4C0Q68I": {
+          "ApiLambdaVersionpsH72Iayq0tUSMiQ2ed9RbK8mrWkFnDpgEc2LnHhmyQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "+YA1T6s+I7QtiZlSI/ykdG2Pk9VDsmpqZum5mW9uTps="
+              "CodeSha256": "jTEjxpXPjGKOpJmh2n+sK15k+NcStNUpcZuOJdvIo2Q="
             }
           },
           "ApiGatewayRestApi": {
@@ -368,7 +368,7 @@
               "ApiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1775584309552": {
+          "ApiGatewayDeployment1775584905152": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -431,7 +431,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionR6apSnfSXAAGZt3tWKqW1Ht965sJ9Xtr6o4C0Q68I"
+              "Ref": "ApiLambdaVersionpsH72Iayq0tUSMiQ2ed9RbK8mrWkFnDpgEc2LnHhmyQ"
             },
             "Export": {
               "Name": "sls-samy-backend-dev-ApiLambdaFunctionQualifiedArn"
@@ -530,7 +530,7 @@
         "timeout": 30,
         "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionR6apSnfSXAAGZt3tWKqW1Ht965sJ9Xtr6o4C0Q68I"
+        "versionLogicalId": "ApiLambdaVersionpsH72Iayq0tUSMiQ2ed9RbK8mrWkFnDpgEc2LnHhmyQ"
       }
     },
     "configValidationMode": "warn",
@@ -542,7 +542,7 @@
           "DATABASE_URL_PRODUCTION": "postgresql://postgres.rtbqwfygfwjdsrlhluey:David.rocha12@aws-1-us-west-2.pooler.supabase.com:6543/postgres",
           "REQRES_API_URL": "https://reqres.in/api",
           "REQRES_API_KEY": "pub_6b4f29d17e8c76826f0b866585d8bee8a2b5e8dc8a7fdd43c8bd26e66bf7f56e",
-          "CORS_ORIGIN": "http://localhost:3000",
+          "CORS_ORIGIN": "*",
           "JWT_SECRET": "your-super-secret-jwt-key-change-this-in-production-12345",
           "JWT_EXPIRES_IN": "24h"
         }
@@ -564,7 +564,7 @@
     "artifact": "C:\\Users\\PC\\Desktop\\SAMY\\backend\\.serverless\\samy-backend.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/samy-backend/dev/1775584325109-2026-04-07T17:52:05.109Z",
+    "artifactDirectoryName": "serverless/samy-backend/dev/1775584919846-2026-04-07T18:01:59.846Z",
     "artifact": "samy-backend.zip"
   }
 }

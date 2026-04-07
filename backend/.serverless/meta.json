@@ -10,7 +10,7 @@
           "DATABASE_URL_PRODUCTION": "postgresql://postgres.rtbqwfygfwjdsrlhluey:David.rocha12@aws-1-us-west-2.pooler.supabase.com:6543/postgres",
           "REQRES_API_URL": "https://reqres.in/api",
           "REQRES_API_KEY": "<REDACTED>",
-          "CORS_ORIGIN": "http://localhost:3000",
+          "CORS_ORIGIN": "*",
           "JWT_SECRET": "<REDACTED>",
           "JWT_EXPIRES_IN": "24h"
         }
@@ -27,7 +27,7 @@
           "DATABASE_URL": "postgresql://postgres.rtbqwfygfwjdsrlhluey:David.rocha12@aws-1-us-west-2.pooler.supabase.com:6543/postgres",
           "REQRES_API_URL": "https://reqres.in/api",
           "REQRES_API_KEY": "<REDACTED>",
-          "CORS_ORIGIN": "http://localhost:3000",
+          "CORS_ORIGIN": "*",
           "JWT_SECRET": "<REDACTED>",
           "JWT_EXPIRES_IN": "24h"
         },
@@ -125,7 +125,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-us-east-1-23c30712-c64b",
-                  "S3Key": "serverless/samy-backend/dev/1775584325109-2026-04-07T17:52:05.109Z/samy-backend.zip"
+                  "S3Key": "serverless/samy-backend/dev/1775584919846-2026-04-07T18:01:59.846Z/samy-backend.zip"
                 },
                 "Handler": "handler.handler",
                 "Runtime": "nodejs18.x",
@@ -138,7 +138,7 @@
                     "DATABASE_URL": "postgresql://postgres.rtbqwfygfwjdsrlhluey:David.rocha12@aws-1-us-west-2.pooler.supabase.com:6543/postgres",
                     "REQRES_API_URL": "https://reqres.in/api",
                     "REQRES_API_KEY": "<REDACTED>",
-                    "CORS_ORIGIN": "http://localhost:3000",
+                    "CORS_ORIGIN": "*",
                     "JWT_SECRET": "<REDACTED>",
                     "JWT_EXPIRES_IN": "24h"
                   }
@@ -154,14 +154,14 @@
                 "ApiLogGroup"
               ]
             },
-            "ApiLambdaVersionR6apSnfSXAAGZt3tWKqW1Ht965sJ9Xtr6o4C0Q68I": {
+            "ApiLambdaVersionpsH72Iayq0tUSMiQ2ed9RbK8mrWkFnDpgEc2LnHhmyQ": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "ApiLambdaFunction"
                 },
-                "CodeSha256": "+YA1T6s+I7QtiZlSI/ykdG2Pk9VDsmpqZum5mW9uTps="
+                "CodeSha256": "jTEjxpXPjGKOpJmh2n+sK15k+NcStNUpcZuOJdvIo2Q="
               }
             },
             "ApiGatewayRestApi": {
@@ -379,7 +379,7 @@
                 "ApiLambdaPermissionApiGateway"
               ]
             },
-            "ApiGatewayDeployment1775584309552": {
+            "ApiGatewayDeployment1775584905152": {
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {
@@ -442,7 +442,7 @@
             "ApiLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "ApiLambdaVersionR6apSnfSXAAGZt3tWKqW1Ht965sJ9Xtr6o4C0Q68I"
+                "Ref": "ApiLambdaVersionpsH72Iayq0tUSMiQ2ed9RbK8mrWkFnDpgEc2LnHhmyQ"
               },
               "Export": {
                 "Name": "sls-samy-backend-dev-ApiLambdaFunctionQualifiedArn"
@@ -537,7 +537,7 @@
           "timeout": 30,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "ApiLambdaVersionR6apSnfSXAAGZt3tWKqW1Ht965sJ9Xtr6o4C0Q68I"
+          "versionLogicalId": "ApiLambdaVersionpsH72Iayq0tUSMiQ2ed9RbK8mrWkFnDpgEc2LnHhmyQ"
         }
       },
       "plugins": [
@@ -557,7 +557,7 @@
         "DATABASE_URL": "postgresql://postgres.rtbqwfygfwjdsrlhluey:David.rocha12@aws-1-us-west-2.pooler.supabase.com:6543/postgres",
         "REQRES_API_URL": "https://reqres.in/api",
         "REQRES_API_KEY": "<REDACTED>",
-        "CORS_ORIGIN": "http://localhost:3000",
+        "CORS_ORIGIN": "*",
         "JWT_SECRET": "<REDACTED>",
         "JWT_EXPIRES_IN": "24h"
       },
@@ -655,7 +655,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-23c30712-c64b",
-                "S3Key": "serverless/samy-backend/dev/1775584325109-2026-04-07T17:52:05.109Z/samy-backend.zip"
+                "S3Key": "serverless/samy-backend/dev/1775584919846-2026-04-07T18:01:59.846Z/samy-backend.zip"
               },
               "Handler": "handler.handler",
               "Runtime": "nodejs18.x",
@@ -668,7 +668,7 @@
                   "DATABASE_URL": "postgresql://postgres.rtbqwfygfwjdsrlhluey:David.rocha12@aws-1-us-west-2.pooler.supabase.com:6543/postgres",
                   "REQRES_API_URL": "https://reqres.in/api",
                   "REQRES_API_KEY": "<REDACTED>",
-                  "CORS_ORIGIN": "http://localhost:3000",
+                  "CORS_ORIGIN": "*",
                   "JWT_SECRET": "<REDACTED>",
                   "JWT_EXPIRES_IN": "24h"
                 }
@@ -684,14 +684,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionR6apSnfSXAAGZt3tWKqW1Ht965sJ9Xtr6o4C0Q68I": {
+          "ApiLambdaVersionpsH72Iayq0tUSMiQ2ed9RbK8mrWkFnDpgEc2LnHhmyQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "+YA1T6s+I7QtiZlSI/ykdG2Pk9VDsmpqZum5mW9uTps="
+              "CodeSha256": "jTEjxpXPjGKOpJmh2n+sK15k+NcStNUpcZuOJdvIo2Q="
             }
           },
           "ApiGatewayRestApi": {
@@ -909,7 +909,7 @@
               "ApiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1775584309552": {
+          "ApiGatewayDeployment1775584905152": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -972,7 +972,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionR6apSnfSXAAGZt3tWKqW1Ht965sJ9Xtr6o4C0Q68I"
+              "Ref": "ApiLambdaVersionpsH72Iayq0tUSMiQ2ed9RbK8mrWkFnDpgEc2LnHhmyQ"
             },
             "Export": {
               "Name": "sls-samy-backend-dev-ApiLambdaFunctionQualifiedArn"
@@ -1017,7 +1017,7 @@
       "serviceProvider": null,
       "instanceParameters": null
     },
-    "serviceRawFile": "service: samy-backend\n\nparams:\n  default:\n    DATABASE_URL_PRODUCTION: ${env:DATABASE_URL_PRODUCTION, ''}\n    REQRES_API_URL: ${env:REQRES_API_URL, 'https://reqres.in/api'}\n    REQRES_API_KEY: 'pub_6b4f29d17e8c76826f0b866585d8bee8a2b5e8dc8a7fdd43c8bd26e66bf7f56e'\n    CORS_ORIGIN: ${env:CORS_ORIGIN, '*'}\n    JWT_SECRET: ${env:JWT_SECRET, 'your-super-secret-jwt-key-change-this-in-production-12345'}\n    JWT_EXPIRES_IN: ${env:JWT_EXPIRES_IN, '24h'}\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n  stage: ${opt:stage, 'dev'}\n  region: us-east-1\n  memorySize: 512\n  timeout: 30\n  environment:\n    NODE_ENV: production\n    DATABASE_URL: ${param:DATABASE_URL_PRODUCTION}\n    REQRES_API_URL: ${param:REQRES_API_URL}\n    REQRES_API_KEY: ${param:REQRES_API_KEY}\n    CORS_ORIGIN: ${param:CORS_ORIGIN}\n    JWT_SECRET: ${param:JWT_SECRET}\n    JWT_EXPIRES_IN: ${param:JWT_EXPIRES_IN}\n\nfunctions:\n  api:\n    handler: handler.handler\n    events:\n      - http:\n          path: /\n          method: ANY\n          cors: true\n      - http:\n          path: /{proxy+}\n          method: ANY\n          cors: true\n\nplugins:\n  - serverless-offline\n\nuseDotenv: true\n",
+    "serviceRawFile": "service: samy-backend\n\nparams:\n  default:\n    DATABASE_URL_PRODUCTION: ${env:DATABASE_URL_PRODUCTION, ''}\n    REQRES_API_URL: ${env:REQRES_API_URL, 'https://reqres.in/api'}\n    REQRES_API_KEY: 'pub_6b4f29d17e8c76826f0b866585d8bee8a2b5e8dc8a7fdd43c8bd26e66bf7f56e'\n    CORS_ORIGIN: '*'\n    JWT_SECRET: ${env:JWT_SECRET, 'your-super-secret-jwt-key-change-this-in-production-12345'}\n    JWT_EXPIRES_IN: ${env:JWT_EXPIRES_IN, '24h'}\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n  stage: ${opt:stage, 'dev'}\n  region: us-east-1\n  memorySize: 512\n  timeout: 30\n  environment:\n    NODE_ENV: production\n    DATABASE_URL: ${param:DATABASE_URL_PRODUCTION}\n    REQRES_API_URL: ${param:REQRES_API_URL}\n    REQRES_API_KEY: ${param:REQRES_API_KEY}\n    CORS_ORIGIN: ${param:CORS_ORIGIN}\n    JWT_SECRET: ${param:JWT_SECRET}\n    JWT_EXPIRES_IN: ${param:JWT_EXPIRES_IN}\n\nfunctions:\n  api:\n    handler: handler.handler\n    events:\n      - http:\n          path: /\n          method: ANY\n          cors: true\n      - http:\n          path: /{proxy+}\n          method: ANY\n          cors: true\n\nplugins:\n  - serverless-offline\n\nuseDotenv: true\n",
     "command": [
       "deploy"
     ],
@@ -1030,12 +1030,12 @@
     "serviceProviderAwsCfStackName": "samy-backend-dev",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:182399704657:stack/samy-backend-dev/8cdb6df0-3296-11f1-b89b-0e3d7d1da913",
     "serviceProviderAwsCfStackCreated": "2026-04-07T15:29:21.596Z",
-    "serviceProviderAwsCfStackUpdated": "2026-04-07T17:16:00.098Z",
+    "serviceProviderAwsCfStackUpdated": "2026-04-07T17:52:12.782Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "ApiLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:us-east-1:182399704657:function:samy-backend-dev-api:17",
+        "OutputValue": "arn:aws:lambda:us-east-1:182399704657:function:samy-backend-dev-api:18",
         "Description": "Current Lambda function version",
         "ExportName": "sls-samy-backend-dev-ApiLambdaFunctionQualifiedArn"
       },
@@ -1144,7 +1144,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-us-east-1-23c30712-c64b",
-              "S3Key": "serverless/samy-backend/dev/1775584325109-2026-04-07T17:52:05.109Z/samy-backend.zip"
+              "S3Key": "serverless/samy-backend/dev/1775584919846-2026-04-07T18:01:59.846Z/samy-backend.zip"
             },
             "Handler": "handler.handler",
             "Runtime": "nodejs18.x",
@@ -1157,7 +1157,7 @@
                 "DATABASE_URL": "postgresql://postgres.rtbqwfygfwjdsrlhluey:David.rocha12@aws-1-us-west-2.pooler.supabase.com:6543/postgres",
                 "REQRES_API_URL": "https://reqres.in/api",
                 "REQRES_API_KEY": "<REDACTED>",
-                "CORS_ORIGIN": "http://localhost:3000",
+                "CORS_ORIGIN": "*",
                 "JWT_SECRET": "<REDACTED>",
                 "JWT_EXPIRES_IN": "24h"
               }
@@ -1173,14 +1173,14 @@
             "ApiLogGroup"
           ]
         },
-        "ApiLambdaVersionR6apSnfSXAAGZt3tWKqW1Ht965sJ9Xtr6o4C0Q68I": {
+        "ApiLambdaVersionpsH72Iayq0tUSMiQ2ed9RbK8mrWkFnDpgEc2LnHhmyQ": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "ApiLambdaFunction"
             },
-            "CodeSha256": "+YA1T6s+I7QtiZlSI/ykdG2Pk9VDsmpqZum5mW9uTps="
+            "CodeSha256": "jTEjxpXPjGKOpJmh2n+sK15k+NcStNUpcZuOJdvIo2Q="
           }
         },
         "ApiGatewayRestApi": {
@@ -1398,7 +1398,7 @@
             "ApiLambdaPermissionApiGateway"
           ]
         },
-        "ApiGatewayDeployment1775584309552": {
+        "ApiGatewayDeployment1775584905152": {
           "Type": "AWS::ApiGateway::Deployment",
           "Properties": {
             "RestApiId": {
@@ -1461,7 +1461,7 @@
         "ApiLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "ApiLambdaVersionR6apSnfSXAAGZt3tWKqW1Ht965sJ9Xtr6o4C0Q68I"
+            "Ref": "ApiLambdaVersionpsH72Iayq0tUSMiQ2ed9RbK8mrWkFnDpgEc2LnHhmyQ"
           },
           "Export": {
             "Name": "sls-samy-backend-dev-ApiLambdaFunctionQualifiedArn"

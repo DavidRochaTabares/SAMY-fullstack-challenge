@@ -9,7 +9,7 @@ export default function PostForm({ initialData, onSubmit, loading }) {
   const [authorUserId, setAuthorUserId] = useState(initialData?.author_user_id || '');
   const [errors, setErrors] = useState({});
 
-  const { reqresUsers } = useSelector((state) => state.users);
+  const { savedUsers } = useSelector((state) => state.users);
 
   useEffect(() => {
     if (initialData) {
@@ -98,14 +98,15 @@ export default function PostForm({ initialData, onSubmit, loading }) {
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
           >
             <option value="">Select an author</option>
-            {(reqresUsers || []).map((user) => (
+            {(savedUsers || []).map((user) => (
               <option key={user.id} value={user.id}>
-                {user.first_name} {user.last_name} ({user.email})
+                {user.firstName} {user.lastName} ({user.email})
               </option>
             ))}
           </select>
-          {(!reqresUsers || reqresUsers.length === 0) && (
-            <p className="mt-1 text-sm text-blue-600">Loading users...</p>
+          <p className="mt-1 text-sm text-gray-600">Only users saved in the database are shown. Import users from the Users page first.</p>
+          {(!savedUsers || savedUsers.length === 0) && (
+            <p className="mt-1 text-sm text-blue-600">No saved users. Please import users first.</p>
           )}
           {errors.authorUserId && (
             <p className="mt-1 text-sm text-red-600">{errors.authorUserId}</p>
